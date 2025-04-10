@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+:root {
+    --mscor: #205F41;
+    --cor-escura:#000;
+    --cor--principal: #6FCF97;
+    --cor--branca: #F5F3E7;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-family: 'Inter', sans-serif;
+    transition: all .2s linear;
+}
+
+html {
+    font-size: 61.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+}
+
+/*INICIO CABEÇALHO DO SITE LINKS E LOGOMARCA*/
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 7%;
+    background-color: var(--cor--branca);
+    width: 100%;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+    z-index: 1000;
+}
+
+.logo {
+    width: 90px;
+}
+
+.logo img {
+    width: 100%;
+}
+
+.menu-principal a {
+    position: relative;
+    color: var(--mscor);
+    font-size: 1.7rem;
+    margin: 1rem;
+    transition: 0.5s;
+}
+
+.menu-principal a:hover {
+    color: var(--cor--principal);
+}
+
+.menu-principal a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    left: 0;
+    background-color: var(--mscor);
+    height: 0.2rem;
+    margin-top: 0.5rem;
+    top: 100%;
+    transition: 0.5s;
+}
+
+.menu-principal a:hover::after {
+    width: 100%;
+}
+
+#menu-celular {
+    font-size: 2.5rem;
+    color: var(--mscor);
+    margin: 1rem;
+    cursor: pointer;
+    display: none;
+}
+
+#menu-celular:hover {
+    color: var(--cor--principal);
+}
+
+.icone-direta .btn {
+    background-color: var(--mscor);
+    font-size: 1.7rem;
+    color: var(--cor--branca);
+    cursor: pointer;
+    padding: 1.2rem 2rem;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.icone-direta .btn:hover {
+    background-color: var(--cor--principal);
+}
+
+/*FIM CABEÇALHO DO SITE LINKS E LOGOMARCA*/
+
+
+/*INICIO DO DESTAQUE DO SITE */
+
+.destaque-inicial {
+    padding: 2rem 7%;
+    background-image: url(../img/slide/fundo.png);
+    width: 100%;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.destaque-bloco {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 6rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.destaque-bloco .destaque-esquedo-conteudo {
+    flex: 1 1 40rem;
+}
+
+.destaque-esquedo-conteudo span {
+    padding: 1rem 0;
+    font-weight: bolder;
+    font-size: 2rem;
+    color: var(--mscor);
+}
+
+.destaque-esquedo-conteudo h2 {
+    margin: 1rem 0;
+    font-size: 48px;
+}
+
+.destaque-esquedo-conteudo p {
+    font-size: 1.7rem;
+    line-height: 3rem;
+    color: var(--mscor);
+}
+
+.destaque-btn {
+    display: flex;
+    margin-top: 2rem;
+    align-items: center;
+    gap: 2rem;
+}
+
+.destaque-btn a {
+    display: inline-block;
+    background-color: var(--mscor);
+    padding: 1.5rem 3rem;
+    color: var(--cor--branca);
+    font-size: 1.7rem;
+    transition: 0.5s ease;
+}
+
+.destaque-btn a:hover {
+    background-color: var(--cor--principal);
+    padding: 1.5rem 2.5rem;
+}
+
+.destaque-btn-2 {
+    background-color: transparent !important;
+    color: var(--mscor);
+    border: 1px solid var(--mscor);
+}
+
+.destaque-btn-2:hover {
+    background-color: var(--cor--principal) !important;
+    color: var(--cor--branca) !important;
+}
+
+.destaque-bloco .destaque-direito-conteudo {
+    flex: 1 1 50rem;
+}
+
+.destaque-bloco .destaque-direito-conteudo img {
+    width: 800px;
+    margin-top: 4rem;
+}
+
+/*FIM DO DESTAQUE DO SITE */
+
+/*INICIO DO SERVICOS DISTAQUE DO SITE*/
+.bloco-servico-1-destaque {
+    padding: 3rem 7%;
+}
+
+.bloco-servico-1 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: space-between;
+    margin-top: -100px;
+}
+
+.bloco-servicos-1-item {
+    flex: 1 1 300px;
+    background-color: var(--cor--branca);
+    padding: 3rem 3rem;
+    cursor: pointer;
+    z-index: 1;
+    background-image: url(..//img/servicos-1/bd-servicos.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.bloco-servicos-1-item span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 0;
+    height: 100%;
+    background-color: var(--mscor);
+    transition: 0.5s;
+
+}
+
+.bloco-servicos-1-item:hover span{
+    width: 100%;
+}
+
+.bloco-servicos-1-item i{
+    font-size: 48px;
+    color: var(--mscor);
+}
+
+.bloco-servicos-1-item:hover i{
+    color: var(--cor--branca);
+}
+
+.bloco-servicos-1-item h2{
+    font-size: 2.5rem;
+    padding: 1rem 0;
+}
+
+.bloco-servicos-1-item:hover h2{
+    color: var(--cor--branca)
+}
+
+.bloco-servicos-1-item p{
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+    padding: 1rem 0;
+}
+
+.bloco-servicos-1-item:hover p{
+    color: var(--cor--branca)
+}
+
+
+/*FIM DO SERVICOS DISTAQUE DO SITE*/
+
+
+/*INICIO SOBRE NÓS DO SITE*/
+
+.sobre-nos{
+    width: 100%;
+    background-image: url(..//img/servicos-1/bd-servicos.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 2rem 7%;
+}
+
+.sobre-nos .sobre-titulo{
+    font-size: 30px;
+    font-weight: bolder;
+    text-align: center;
+    color: var(--mscor);
+    width: 200px;
+    padding: 2rem 0;
+    margin: 0 auto;
+    border-bottom: 2px solid var(--cor--principal);
+}
+
+.bloco-sobre{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+}
+
+.bloco-sobre-conteudo-esquerdo {
+    flex: 1 1 40rem;
+}
+
+.bloco-sobre-conteudo-esquerdo img{
+    width: 115%;
+    padding: 2rem;
+}
+
+.bloco-sobre-conteudo {
+    flex: 1 1 45rem;
+}
+
+.bloco-sobre-conteudo img {
+    width: 100%;
+}
+
+.bloco-sobre-conteudo-direito h2 {
+    font-size: 30px;
+    line-height: 4rem;
+    font-weight: bolder;
+    padding: 1.5rem 0;
+    color: var(--cor-escura);
+}
+
+.bloco-sobre-conteudo-direito p{
+    font-family: 'Inter', sans-serif;
+    font-size: 1.5rem;
+    padding: 1.5rem 0;
+    color: var(--mscor);
+    line-height: 2.5rem;
+    text-align: left;
+}
+
+.bloco-sobre-descricao{
+    line-height: 2.5rem !important;
+}
+
+.bloco-sobre-btn{
+    background-color: transparent;
+    font-size: 1.5rem;
+    cursor: pointer;
+    margin-top: 0.5rem;
+    border: 1px solid var(--mscor);
+    padding: 1.5rem 3rem;
+    transition: 0.5s all;
+}
+
+.bloco-sobre-btn:hover {
+    background-color: var(--cor--principal);
+    color: var(--cor--branca);
+    border: none;
+    padding: 1.5rem 3.5rem;
+}
+
+/*FIM SOBRE NÓS DO SITE*/
