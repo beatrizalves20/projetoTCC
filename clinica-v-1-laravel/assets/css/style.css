@@ -354,3 +354,110 @@ header {
 }
 
 /*FIM SOBRE NÓS DO SITE*/
+
+/*INICIO BLOCO SERVIÇOS 2*/
+.bloco-servico-2{
+    width: 100%;
+    padding: 3rem 7%;
+}
+
+.bloco-servico-2-titulo h2{
+    font-size: 40px;
+    color: var(--mscor);
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 3rem;
+}
+
+.bloco-servico-2-conteudo{
+    display: flex;
+    gap: 4rem;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+}
+
+.bloco-servico-2-item{
+    flex: 1 1 300px;
+    padding: 3rem 2rem;
+    border: 2px solid var(--mscor);
+    box-shadow: rgba(99, 99, 99, 0.2) 0px  2px 8px 0px;
+}
+
+.bloco-servico-2-item:hover{
+    transform: translateY(-10px);
+    border-bottom: 2px solid var(--mscor);
+    background-color: var(--cor--branca);
+}
+
+.bloco-servico-2-item:hover .bloco-servico-2-icone{
+    width: 100px;
+    height: 100px;
+    border-radius: 0;
+    background-color: var(--mscor);
+}
+
+.bloco-servico-2-item:hover .bloco-servico-2-icone i{
+    color: var(--cor--branca);
+    transform: scale(1.1);
+}
+
+.bloco-servico-2-icone {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    line-height: 100px;
+    background-color: var(--cor--branca);
+    border-radius: 50%;
+    border: 1px solid var(--mscor);
+}
+
+.bloco-servico-2-icone i{
+    font-size: 4rem;
+    padding: 1rem;
+    color: var(--mscor);
+}
+
+.bloco-servico-2-item h3{
+    font-size: 2rem;
+    padding-top: 2rem;
+}
+
+.bloco-servico-2-item p{
+    font-size: 1.5rem;
+    padding: 1.5rem 0;
+    line-height: 2.5rem;
+}
+
+/*FIM BLOCO SERVIÇOS 2*/
+
+/*INICIO BLOCO MEDICOS*/
+.medicos-principal{
+    width: 100%;
+    background-image: url(../img/medicos/fundo.png);
+    background-color: var(--cor--branca);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding: 2rem 7%;
+}
+
+.bloco-medico-titulo{
+    font-size: 30px;
+    margin: 4rem;
+    text-align: center;
+    color: var(--mscor);
+}
+
+.bloco-principal-medico{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6rem;
+    align-items: center;
+}
+
+.bloco-principal-medico:hover{
+    
+}
+/*FIM BLOCO MEDICOS*/
