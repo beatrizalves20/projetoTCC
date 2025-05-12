@@ -500,7 +500,49 @@ header {
     border-radius: 10px!important; 
     transform: scale(1.2);
 }
-/*.bloco-principal-medico:hover{
-    
-}*/
+.bloco-medico::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    z-index: 1;
+    bottom: -200px;
+    background: linear-gradient(0deg, #f5f5f5, 50%, transparent);
+    transition: 0.5s;
+}
+
+.bloco-medico:hover::after {
+    bottom: -100px;
+}
+
+.bloco-medico-detalhes {
+    position: absolute;
+    left: 40%;
+    bottom: -30px;
+    z-index: 2;
+    text-align: center;
+}
+
+.bloco-medico-detalhes h2 {
+    font-size: 25px;
+    color: var(--cor-escura);
+    padding: 2rem 0;
+}
+
+.bloco-medico-detalhes i {
+    font-size: 2.5rem;
+    color: var(--mscor);
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.bloco-medico-detalhes i:hover{
+    transform: scale(1.2);
+    color: var(--cor--principal);
+}
+
+.bloco-medico:hover .bloco-medico-detalhes{
+    bottom: 10px;
+}
 /*FIM BLOCO MEDICOS*/
